@@ -17,7 +17,7 @@ class Chronometer {
   }
 
 
-  getSeconds() {
+  getSeconds() { //also possible : return Math.floor(this.currentTime % 60);
     let seconds = 0;
     if (this.currentTime < 60) {
       seconds += this.currentTime;
@@ -26,6 +26,7 @@ class Chronometer {
     }
     return seconds;
   }
+
 
   computeTwoDigitNumber(value) {
     let twoDigits;
@@ -37,6 +38,7 @@ class Chronometer {
     }
     return twoDigits
     // return value as string "0value" if value is 1num or "value"
+    //also possible : return ("0" + value).sliced(-2);
   }
 
   stop() {

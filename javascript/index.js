@@ -12,6 +12,8 @@ btnLeftElement.addEventListener('click', () => {
     //start class => running
     btnLeftElement.classList.add("stop");
     btnLeftElement.classList.remove("start");
+    //also possible: btnLefElement.className("btn stop") 
+    //that just replaces the current classes with btn and stop
     btnLeftElement.innerHTML = "STOP";
 
     btnRightElement.classList.add("split");
@@ -20,7 +22,7 @@ btnLeftElement.addEventListener('click', () => {
 
     chronometer.start();
 
-    interval = setInterval(this.printTime, 500);
+    interval = setInterval(this.printTime, 500); //interval could also be set in printTime()
 
   } else {
     //stop class => Stopped
@@ -55,13 +57,13 @@ btnRightElement.addEventListener('click', () => {
       splitsElement.removeChild(splitsElement.firstChild);
     }
   }
-  
+  //could also have done:
+  //let timeMark = chronometer.split();
+  //let listEl = document.createElement("li");
+  //listEl.innerText = timeMark;
+  //splitsElement.appendChild(listEl);
 
 
-
-
-
-  // ... your code goes here
 });
 
 //  if(splitsElement.hasChildNodes()) 
